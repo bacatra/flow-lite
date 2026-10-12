@@ -49,7 +49,7 @@ Aplicativo desktop de digitacao por voz inteligente para Windows, projetado para
 ### 1. Clonar o Repositorio
 
 ```bash
-git clone https://github.com/seu-usuario/flow-lite.git
+git clone https://github.com/bacatra/flow-lite.git
 cd flow-lite
 ```
 
