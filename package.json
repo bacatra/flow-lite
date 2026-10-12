@@ -1,0 +1,47 @@
+{
+  "name": "flow-lite",
+  "version": "1.0.0",
+  "description": "Voice typing application for Windows",
+  "productName": "Flow Lite",
+  "main": "src/main/index.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win --dir",
+    "dist": "electron-builder --win portable"
+  },
+  "build": {
+    "appId": "Flow Lite",
+    "productName": "Flow Lite",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "icon": "assets/icon.ico",
+      "target": [
+        "dir",
+        "portable"
+      ]
+    },
+    "asarUnpack": [
+      "src/scripts/**/*",
+      "assets/**/*"
+    ],
+    "files": [
+      "src/**/*",
+      "assets/**/*"
+    ]
+  },
+  "keywords": [
+    "voice-typing",
+    "stt",
+    "speech-to-text",
+    "windows",
+    "electron"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^44.7.0",
+    "electron-builder": "^26.15.3"
+  }
+}
