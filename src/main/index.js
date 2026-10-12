@@ -6,11 +6,11 @@ const { getActiveContext } = require('./contextReader');
 const { injectTextAtCursor } = require('./textInjector');
 const { processAudioWithOpenRouter, testApiKey } = require('./openrouter');
 
-// Crash and lifecycle logging
-const crashLogFile = 'c:\\Users\\Caio\\Desktop\\REA\\flow-lite\\crash.log';
+// Lifecycle and error logging
 function logCrash(msg) {
   try {
-    fs.appendFileSync(crashLogFile, `[${new Date().toISOString()}] ${msg}\n`);
+    const logFile = path.join(app.getPath('userData'), 'app.log');
+    fs.appendFileSync(logFile, `[${new Date().toISOString()}] ${msg}\n`);
   } catch (e) {}
 }
 
